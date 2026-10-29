@@ -1,0 +1,63 @@
+{
+  "version": "2026-10-28",
+  "note": "Curated clinical dispensing guidelines from CDSCO, Jan Aushadhi (PMBJP), Tamil Nadu Health Dept, and GRH Madurai.",
+  "sources": {
+    "CDSCO_OTC": "Central Drugs Standard Control Organisation (CDSCO) - Safe Dispensing Guidelines, https://cdsco.gov.in (accessed 2026-10-26)",
+    "PMBJP_PRICELIST": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana (PMBJP) Price List 2026, Pharmaceuticals & Medical Devices Bureau of India, http://janaushadhi.gov.in (accessed 2026-10-26)",
+    "TN_HEALTH_104": "Government of Tamil Nadu Health & Family Welfare Department - 104 Health Helpline Protocol, https://stopcoronatn.in (accessed 2026-10-26)",
+    "GRH_MADURAI_OPD": "Government Rajaji Hospital (GRH) Madurai Outpatient Medication Safety Manual, Madurai Medical College (accessed 2026-10-26)",
+    "WHO_MED_SAFETY": "World Health Organization - Medication Without Harm Global Patient Safety Challenge, https://who.int (accessed 2026-10-26)"
+  },
+  "items": [
+    {
+      "id": "G-DOSE-CODE",
+      "source": "GRH_MADURAI_OPD",
+      "text": "Never alter, double, or stop prescribed dosages without consulting the treating doctor or registered pharmacist. Call Tamil Nadu 104 Health Helpline for guidance."
+    },
+    {
+      "id": "G-FOOD-TIMING",
+      "source": "CDSCO_OTC",
+      "text": "Prescription codes: 1-0-1 AF means morning 1, night 1 after food. 1-0-0 BF means morning 1 before food. SOS means only when severe pain or fever occurs."
+    },
+    {
+      "id": "G-METFORMIN",
+      "source": "GRH_MADURAI_OPD",
+      "text": "Metformin should always be taken with or immediately after meals to prevent gastric upset, nausea, and abdominal cramps."
+    },
+    {
+      "id": "G-TELMISARTAN",
+      "source": "GRH_MADURAI_OPD",
+      "text": "Blood pressure medicines like Telmisartan or Amlodipine must be taken at the same fixed time daily; do not skip when blood pressure feels normal."
+    },
+    {
+      "id": "G-THYROXINE",
+      "source": "CDSCO_OTC",
+      "text": "Levothyroxine must be taken first thing in the morning on an empty stomach with plain water, waiting at least 30 minutes before coffee, tea, or breakfast."
+    },
+    {
+      "id": "G-PARACETAMOL",
+      "source": "CDSCO_OTC",
+      "text": "Paracetamol maximum daily adult dose is 4000mg. Do not combine with other cold remedies containing acetaminophen to prevent acute liver toxicity."
+    },
+    {
+      "id": "G-IRON-TEA",
+      "source": "WHO_MED_SAFETY",
+      "text": "Iron / Ferrous sulfate tablets should be taken after food with water or citrus fruit; never take with milk, tea, or coffee as tannins inhibit absorption."
+    },
+    {
+      "id": "G-ANTIBIOTIC-COURSE",
+      "source": "WHO_MED_SAFETY",
+      "text": "Antibiotics such as Amoxicillin must be completed for the full prescribed duration even if fever and symptoms subside to avoid drug resistance."
+    },
+    {
+      "id": "G-JAN-AUSHADHI",
+      "source": "PMBJP_PRICELIST",
+      "text": "PMBJP Jan Aushadhi generic medicines contain the identical active pharmaceutical ingredient (API), strength, and therapeutic bioequivalence as branded equivalents at 50% to 90% lower cost."
+    },
+    {
+      "id": "G-EMERGENCY-108",
+      "source": "TN_HEALTH_104",
+      "text": "Severe red flags including chest pain, breathlessness, loss of consciousness, poisoning, or allergic swelling require immediate emergency ambulance call to 108 or transfer to GRH Madurai Casualty."
+    }
+  ]
+}

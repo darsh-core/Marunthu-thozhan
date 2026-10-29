@@ -1,0 +1,45 @@
+{
+  "version": "2026-10-28",
+  "kendras": [
+    {
+      "id": "MDU-KENDRA-01",
+      "name": "PMBJP Kendra - Goripalayam (Near GRH)",
+      "landmark": "Opposite Government Rajaji Hospital (GRH) Gate 2, Panagal Road",
+      "address": "12/4 Panagal Road, Goripalayam, Madurai 625020",
+      "phone": "+91-452-2532101",
+      "timing": "8:00 AM - 9:00 PM (All days)",
+      "lat": 9.9295,
+      "lon": 78.1252
+    },
+    {
+      "id": "MDU-KENDRA-02",
+      "name": "PMBJP Kendra - Anna Nagar",
+      "landmark": "Near Anna Nagar Roundana, 80 Feet Road",
+      "address": "45, 80 Feet Road, Anna Nagar, Madurai 625020",
+      "phone": "+91-452-2524412",
+      "timing": "9:00 AM - 9:30 PM",
+      "lat": 9.9189,
+      "lon": 78.1481
+    },
+    {
+      "id": "MDU-KENDRA-03",
+      "name": "PMBJP Kendra - Simmakkal",
+      "landmark": "Near Vakkil New Street Junction",
+      "address": "78 Vakkil New Street, Simmakkal, Madurai 625001",
+      "phone": "+91-452-2348821",
+      "timing": "8:30 AM - 9:00 PM",
+      "lat": 9.9242,
+      "lon": 78.1205
+    },
+    {
+      "id": "MDU-KENDRA-04",
+      "name": "PMBJP Kendra - Periyar / Railway Station",
+      "landmark": "Near Central Bus Stand, West Veli Street",
+      "address": "104 West Veli Street, Periyar, Madurai 625001",
+      "phone": "+91-452-2321190",
+      "timing": "8:00 AM - 10:00 PM",
+      "lat": 9.9175,
+      "lon": 78.1130
+    }
+  ]
+}

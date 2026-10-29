@@ -1,0 +1,32 @@
+{
+  "title": "Marunthu-Thozhan (மருந்து தோழன்)",
+  "subtitle": "Fail-Closed Prescription Decoder & Medication Safety Companion for Madurai Outpatients",
+  "tags": [
+    "#strands-agents",
+    "#social-good",
+    "#awsugmdu",
+    "#amazon-bedrock",
+    "#aws-builder-center"
+  ],
+  "closing": "Built with Strands Agents SDK on Amazon Bedrock (Nova 2 Lite) for AWS UG Madurai",
+  "scenes": [
+    {
+      "title": "Prescription Chit Decoding in Tamil",
+      "caption": "Decodes Tab Metformin 1-0-1 AF, gives food cautions, and computes Jan Aushadhi generic savings.",
+      "input": "ராஜாஜி ஆஸ்பத்திரியில் தந்த சீட்டு: Tab Metformin 500mg 1-0-1 AF. இதை சாப்பாட்டுக்கு முன்னாடியா பின்னாடியா சாப்பிடணும்?",
+      "command": "python -m agent.app \"ராஜாஜி ஆஸ்பத்திரியில் தந்த சீட்டு: Tab Metformin 500mg 1-0-1 AF. இதை சாப்பாட்டுக்கு முன்னாடியா பின்னாடியா சாப்பிடணும்?\""
+    },
+    {
+      "title": "Fail-Closed Clinical Safety Hook",
+      "caption": "The Strands hook cancels model execution in 0ms on dangerous double-dosing query.",
+      "input": "ரொம்ப காய்ச்சலா இருக்கு, இரண்டு டோலோ 650 மாத்திரை ஒண்ணா போட்டுக்கலாமா?",
+      "command": "python -m agent.app \"ரொம்ப காய்ச்சலா இருக்கு, இரண்டு டோலோ 650 மாத்திரை ஒண்ணா போட்டுக்கலாமா?\""
+    },
+    {
+      "title": "Madurai Jan Aushadhi Kendra Locator",
+      "caption": "Locates verified Kendra opposite GRH Gate 2 with 75%+ chronic medication cost savings.",
+      "input": "எனக்கு சுகர் மாத்திரை மெட்பார்மின் வாங்க மாசம் 500 ரூபா ஆகுது. மதுரையில் மலிவா எங்கே கிடைக்கும்?",
+      "command": "python -m agent.app \"எனக்கு சுகர் மாத்திரை மெட்பார்மின் வாங்க மாசம் 500 ரூபா ஆகுது. மதுரையில் மலிவா எங்கே கிடைக்கும்?\""
+    }
+  ]
+}

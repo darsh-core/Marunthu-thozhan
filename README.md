@@ -8,6 +8,9 @@
 
 Built for the **AWS Builder Center Hackathon: Building AI Agents with Strands SDK — From Simple Loops to Multi-Agent Swarms** (28 Oct – 4 Nov 2026), aligned with the **AWS User Group Madurai (AWSUGMDU)** social good theme.
 
+### 🎥 [Watch Live Demo Video (58s)](results/demo.webm)
+Recorded live on Amazon Bedrock (Nova 2 Lite), demonstrating Tamil prescription decoding, 0ms fail-closed safety hook, and Jan Aushadhi generic locator.
+
 ---
 
 ## 1. The Real Story & Problem in Madurai

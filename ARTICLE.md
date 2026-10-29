@@ -105,6 +105,6 @@ Marunthu-Thozhan extends substantially beyond the workshop in three key dimensio
 
 Marunthu-Thozhan demonstrates how the **Strands Agents SDK** and **Amazon Bedrock** can be engineered responsibly for underserved communities in Tamil Nadu. By anchoring AI in deterministic safety hooks, regional linguistic grounding, and public health infrastructure, we can deliver genuine social good that protects patient safety while alleviating healthcare poverty.
 
-- **Public Repository:** https://github.com/logesh4v/marunthu-thozhan
+- **Public Repository:** https://github.com/darsh-core/Marunthu-thozhan
 - **Under-3-Minute Demo Video:** [Link to Demo Video]
 - **AWS User Group Madurai Community Portal:** https://awsugmdu.in

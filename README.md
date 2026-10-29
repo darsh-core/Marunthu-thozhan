@@ -102,8 +102,8 @@ Measured across 31 human-labelled cases (including 13 red-flag emergencies, 13 i
 ### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/marunthu-thozhan.git
-cd marunthu-thozhan
+git clone https://github.com/darsh-core/Marunthu-thozhan.git
+cd Marunthu-thozhan
 
 # Create and activate virtual environment
 python3.12 -m venv .venv

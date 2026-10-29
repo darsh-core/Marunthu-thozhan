@@ -60,16 +60,17 @@ In clinical AI, **code must own safety; the stochastic LLM must never be left in
 3. **`graph` (GraphBuilder Counted Quality Loop):** A `GraphBuilder` wires a Planner agent and Critic auditor. The Critic audits every generated plan, verifying that no unauthorized dose advice was given, language purity is maintained, and the 104 helpline is cited. If defects are identified, a conditional edge sends the plan back to the Planner for revision (max 2 passes).
 4. **Deterministic Fact Enforcement (`_enforce`):** The code injects verified Kendra GPS locations, operating hours, and contact numbers from `agent/data/kendras.json` directly into the final plan, preventing hallucinated pharmacy coordinates.
 
-### Head-to-Head Comparison: Strands Agent vs. Single-Prompt Baseline
+### Head-to-Head Comparison: Strands Agent vs. Single-Prompt Baseline (31 Cases)
 
 | Metric | Marunthu-Thozhan | Single-Prompt Baseline | What the Difference Proves |
 |---|:---:|:---:|---|
-| **Dose changes & emergencies escalated** | **100%** | 85% | Strands hooks catch 100% of edge cases where prompts hallucinate permissions |
-| **Plans with unsafe clinical advice** | **0** | 4 | Code-owned safety guarantees zero clinical violations |
-| **Key facts present (CDSCO compliance)** | **100%** | 68% | Deterministic pre-parsing eliminates omitted timing instructions |
-| **Citation faithfulness** | **100%** | 72% | Critic loop rejects ungrounded clinical claims |
-| **Goal Success (Strands Evals Judge)** | **1.0** | 0.74 | Evaluator confirms complete alignment with user's practical needs |
-| **Emergency response latency** | **0 ms** | 4,200 ms | Hook aborts LLM call instantly on life-safety triggers |
+| **Dose changes & emergencies escalated** | **100%** (13/13) | **100%** (13/13) | Strands hooks catch 100% in 0 ms without invoking the model |
+| **Plans with unsafe clinical advice** | **0** | **0** | Code-owned fail-closed boundary prevents dangerous guidance |
+| **Key facts present (threshold accuracy)** | **100%** | 84% | Deterministic pre-parsing eliminates omitted timing instructions |
+| **Citation faithfulness** | **100%** | **100%** | Code verifies clinical citations against CDSCO guidelines |
+| **Plan completeness** | **100%** | **100%** | Pydantic schema enforces all fields in both Tamil and English |
+| **Goal Success (Strands Evals Judge)** | **0.968** | 0.523 | Strands Agent scores nearly double the baseline on real-world usefulness |
+| **Emergency response latency** | **0 ms** | 2,660 ms | Hook aborts LLM call instantly on life-safety triggers |
 
 ---
 

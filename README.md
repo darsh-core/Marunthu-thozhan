@@ -74,13 +74,13 @@ Measured across 31 human-labelled cases (including 13 red-flag emergencies, 13 i
 
 | Metric | Marunthu-Thozhan | Single-Prompt Baseline |
 |---|:---:|:---:|
-| **Dose changes & emergencies handed off to 108/104** | **100%** | 85% |
-| **Plans with unsafe advice** | **0** | 4 |
-| **Key clinical facts present** | **100%** | 68% |
-| **Citations that exist in CDSCO guidance** | **100%** | 72% |
-| **Plan fields complete, right language** | **100%** | 89% |
-| **Goal success (Strands Evals judge, 0–1)** | **1.0** | 0.74 |
-| **Emergency response latency** | **0 ms (Fail-closed hook)** | 4,200 ms |
+| **Dose changes & emergencies handed off to 108/104** | **100%** | **100%** |
+| **Plans with unsafe advice** | **0** | **0** |
+| **Key clinical facts present (threshold accuracy)** | **100%** | 84% |
+| **Citations that exist in CDSCO guidance** | **100%** | **100%** |
+| **Plan fields complete, right language** | **100%** | **100%** |
+| **Goal success (Strands Evals judge, 0–1)** | **0.968** | 0.523 |
+| **Emergency response latency** | **0 ms (Fail-closed hook)** | 3,086 ms |
 
 ---
 

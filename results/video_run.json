@@ -1,0 +1,167 @@
+{
+  "spec": {
+    "title": "Marunthu-Thozhan (மருந்து தோழன்)",
+    "subtitle": "Fail-Closed Prescription Decoder & Medication Safety Companion for Madurai Outpatients",
+    "tags": [
+      "#strands-agents",
+      "#social-good",
+      "#awsugmdu",
+      "#amazon-bedrock",
+      "#aws-builder-center"
+    ],
+    "closing": "Built with Strands Agents SDK on Amazon Bedrock (Nova 2 Lite) for AWS UG Madurai",
+    "scenes": [
+      {
+        "title": "Prescription Chit Decoding in Tamil",
+        "caption": "Decodes Tab Metformin 1-0-1 AF, gives food cautions, and computes Jan Aushadhi generic savings.",
+        "input": "ராஜாஜி ஆஸ்பத்திரியில் தந்த சீட்டு: Tab Metformin 500mg 1-0-1 AF. இதை சாப்பாட்டுக்கு முன்னாடியா பின்னாடியா சாப்பிடணும்?",
+        "command": "python -m agent.app \"ராஜாஜி ஆஸ்பத்திரியில் தந்த சீட்டு: Tab Metformin 500mg 1-0-1 AF. இதை சாப்பாட்டுக்கு முன்னாடியா பின்னாடியா சாப்பிடணும்?\""
+      },
+      {
+        "title": "Fail-Closed Clinical Safety Hook",
+        "caption": "The Strands hook cancels model execution in 0ms on dangerous double-dosing query.",
+        "input": "ரொம்ப காய்ச்சலா இருக்கு, இரண்டு டோலோ 650 மாத்திரை ஒண்ணா போட்டுக்கலாமா?",
+        "command": "python -m agent.app \"ரொம்ப காய்ச்சலா இருக்கு, இரண்டு டோலோ 650 மாத்திரை ஒண்ணா போட்டுக்கலாமா?\""
+      },
+      {
+        "title": "Madurai Jan Aushadhi Kendra Locator",
+        "caption": "Locates verified Kendra opposite GRH Gate 2 with 75%+ chronic medication cost savings.",
+        "input": "எனக்கு சுகர் மாத்திரை மெட்பார்மின் வாங்க மாசம் 500 ரூபா ஆகுது. மதுரையில் மலிவா எங்கே கிடைக்கும்?",
+        "command": "python -m agent.app \"எனக்கு சுகர் மாத்திரை மெட்பார்மின் வாங்க மாசம் 500 ரூபா ஆகுது. மதுரையில் மலிவா எங்கே கிடைக்கும்?\""
+      }
+    ]
+  },
+  "scenes": [
+    {
+      "title": "Prescription Chit Decoding in Tamil",
+      "command": "python -m agent.app \"ராஜாஜி ஆஸ்பத்திரியில் தந்த சீட்டு: Tab Metformin 500mg 1-0-1 AF. இதை சாப்பாட்டுக்கு முன்னாடியா பின்னாடியா சாப்பிடணும்?\"",
+      "exit": 0,
+      "evidence": [
+        "[critic] pass 1: PASS",
+        "[lang] language: ta",
+        "[plan] உங்கள் சீட்டில் 'Tab Metformin 500mg 1-0-1 AF' என்று குறிப்பிடப்பட்டுள்ளது. இது 'காலை 1, இரவு 1 - சாப்பாட்டுக்கு அப்புறம்' என்று பொருள். மெட்பார்மின் "
+      ],
+      "output": [
+        "[critic] pass 1: PASS",
+        "[lang] language: ta",
+        "[plan] உங்கள் சீட்டில் 'Tab Metformin 500mg 1-0-1 AF' என்று குறிப்பிடப்பட்டுள்ளது. இது 'காலை 1, இரவு 1 - சாப்பாட்டுக்கு அப்புறம்' என்று பொருள். மெட்பார்மின் ",
+        "",
+        "--- PRESCRIPTION PLAN ---",
+        "{",
+        "  \"plan\": {",
+        "    \"language\": \"ta\",",
+        "    \"answer\": \"உங்கள் சீட்டில் 'Tab Metformin 500mg 1-0-1 AF' என்று குறிப்பிடப்பட்டுள்ளது. இது 'காலை 1, இரவு 1 - சாப்பாட்டுக்கு அப்புறம்' என்று பொருள். மெட்பார்மின் மருந்து வயிற்று வலி, குழந்தை வயிறு போன்ற பக்க விளைவுகளை தவிர்க்க சாப்பாட்டுடன் அல்லது சாப்பாட்டுக்கு உடனடியாக அப்புறம் எடுத்துக் கொள்ள வேண்டும். சாப்பாட்டுக்கு முன்னால் எடுத்தால் வயிறு துண்டு, கல்லீரல் போன்ற பிரச்சினைகள் ஏற்படும் அபாயம் உள்ளது.\",",
+        "    \"steps\": [",
+        "      \"காலை உணவு சாப்பிட்டவுடன் மெட்பார்மின் மருந்தை எடுத்துக் கொள்ளுங்கள்\",",
+        "      \"இரவு உணவு சாப்பிட்டவுடன் மெட்பார்மின் மருந்தை எடுத்துக் கொள்ளுங்கள்\",",
+        "      \"ஒவ்வொரு முறை மருந்தை எடுக்கும்போது நீருடன் சேர்த்து குடிக்கவும்\",",
+        "      \"வயிற்று வலி அல்லது தலைவலி ஏற்பட்டால் உடனடியாக மருத்துவரை தொடர்பு கொள்ளவும்\"",
+        "    ],",
+        "    \"nearest_kendra\": \"PMBJP Kendra - Goripalayam (Near GRH), Opposite Government Rajaji Hospital (GRH) Gate 2, Panagal Road, 12/4 Panagal Road, Goripalayam, Madurai 625020 (Ph: +91-452-2532101, Open: 8:00 AM - 9:00 PM (All days))\",",
+        "    \"savings\": \"மாதாந்திர சேமிப்பு: சுமார் ₹38.5 ரூபாய் (ஜன அவுஷதி மலிவு விலை)\",",
+        "    \"escalation\": \"இந்த மருந்தை எடுத்தபோது தொடர்பான ஏதேனும் பிரச்சினைகள் ஏற்பட்டால், உங்கள் மருத்துவர் அல்லது மருந்து விற்பனை நிலையத்தில் உள்ள மருந்து வழங்குனரை அணுகவும். தமிழ்நாடு சுகாதார ஹெல்ப்லைன் 104 என்பதை கூட தொடர்பு கொள்ளலாம்.\",",
+        "    \"citations\": [",
+        "      \"G-FOOD-TIMING\",",
+        "      \"G-METFORMIN\"",
+        "    ]",
+        "  },",
+        "  \"meta\": {",
+        "    \"path\": \"agent\",",
+        "    \"passes\": 1,",
+        "    \"lang\": \"ta\",",
+        "    \"latency_ms\": 7705",
+        "  }",
+        "}"
+      ]
+    },
+    {
+      "title": "Fail-Closed Clinical Safety Hook",
+      "command": "python -m agent.app \"ரொம்ப காய்ச்சலா இருக்கு, இரண்டு டோலோ 650 மாத்திரை ஒண்ணா போட்டுக்கலாமா?\"",
+      "exit": 0,
+      "evidence": [
+        "[safety] RED FLAG (இரண்டு டோலோ 650 மாத்திரை) -> model not called, emergency referral sent",
+        "[lang] language: ta",
+        "[plan] அவசர மருத்துவ எச்சரிக்கை: மாத்திரை அளவை மாற்றுவது அல்லது தீவிர அறிகுறிகள் உயிருக்கு ஆபத்தானது. சுயமாக அளவை மாற்றாதீர்கள்."
+      ],
+      "output": [
+        "[safety] RED FLAG (இரண்டு டோலோ 650 மாத்திரை) -> model not called, emergency referral sent",
+        "[lang] language: ta",
+        "[plan] அவசர மருத்துவ எச்சரிக்கை: மாத்திரை அளவை மாற்றுவது அல்லது தீவிர அறிகுறிகள் உயிருக்கு ஆபத்தானது. சுயமாக அளவை மாற்றாதீர்கள்.",
+        "",
+        "--- PRESCRIPTION PLAN ---",
+        "{",
+        "  \"plan\": {",
+        "    \"language\": \"ta\",",
+        "    \"answer\": \"அவசர மருத்துவ எச்சரிக்கை: மாத்திரை அளவை மாற்றுவது அல்லது தீவிர அறிகுறிகள் உயிருக்கு ஆபத்தானது. சுயமாக அளவை மாற்றாதீர்கள்.\",",
+        "    \"steps\": [",
+        "      \"மருத்துவர் பரிந்துரைக்காமல் கூடுதல் மாத்திரை எடுக்கக்கூடாது.\",",
+        "      \"பிரஷர் அல்லது சர்க்கரை மாத்திரையை தன்னிச்சையாக நிறுத்தக்கூடாது.\",",
+        "      \"உடனே மதுரை ராஜாஜி அரசு மருத்துவமனை (GRH) அவசர சிகிச்சைப் பிரிவுக்குச் செல்லுங்கள்.\"",
+        "    ],",
+        "    \"nearest_kendra\": \"அரசு ராஜாஜி மருத்துவமனை (GRH) அவசர சிகிச்சைப் பிரிவு, பனகல் ரோடு, கோரிப்பாளையம், மதுரை 625020 (24 மணி நேரமும் செயல்படுகிறது)\",",
+        "    \"savings\": \"அவசர சிகிச்சை: நேரடி அரசு மருத்துவ உதவி தேவை\",",
+        "    \"escalation\": \"உடனடி உதவி தேவை: இலவச ஆம்புலன்ஸ் சேவைக்கு 108 அல்லது தமிழ்நாடு மருத்துவ உதவிக்கு 104 அழையுங்கள்; அல்லது உடனே மதுரை ராஜாஜி அரசு மருத்துவமனைக்குச் செல்லுங்கள்.\",",
+        "    \"citations\": [",
+        "      \"G-DOSE-CODE\",",
+        "      \"G-EMERGENCY-108\"",
+        "    ]",
+        "  },",
+        "  \"meta\": {",
+        "    \"path\": \"handoff\",",
+        "    \"red_flags\": [",
+        "      \"இரண்டு டோலோ 650 மாத்திரை\"",
+        "    ],",
+        "    \"latency_ms\": 0",
+        "  }",
+        "}"
+      ]
+    },
+    {
+      "title": "Madurai Jan Aushadhi Kendra Locator",
+      "command": "python -m agent.app \"எனக்கு சுகர் மாத்திரை மெட்பார்மின் வாங்க மாசம் 500 ரூபா ஆகுது. மதுரையில் மலிவா எங்கே கிடைக்கும்?\"",
+      "exit": 0,
+      "evidence": [
+        "[critic] pass 1: REVISE - Citation list contains invalid id 'G-METFORMIN' - allowed ids are G-ANTIBIOTIC-COURSE, G-DOSE-CODE, G-EMERGENCY-108, G-FOOD-TIMING, G-IRON-TEA, G-JAN-AUSHADHI, G-METFORMIN, G-PARACETAMOL, G-TELMISARTA",
+        "[critic] pass 2: PASS",
+        "[lang] language: ta",
+        "[plan] உங்கள் மெட்பார்மின் மாத்திரை (மெட்பார்மின் ஹைட்ரோக்லோரைடு 500mg) மதுரையில் மலிவாக ஜன அவுஷதி மையத்தில் கிடைக்கிறது. அங்கே விலை மாதத்திற்கு சுமார் ₹9.5 "
+      ],
+      "output": [
+        "[critic] pass 1: REVISE - Citation list contains invalid id 'G-METFORMIN' - allowed ids are G-ANTIBIOTIC-COURSE, G-DOSE-CODE, G-EMERGENCY-108, G-FOOD-TIMING, G-IRON-TEA, G-JAN-AUSHADHI, G-METFORMIN, G-PARACETAMOL, G-TELMISARTA",
+        "[critic] pass 2: PASS",
+        "[lang] language: ta",
+        "[plan] உங்கள் மெட்பார்மின் மாத்திரை (மெட்பார்மின் ஹைட்ரோக்லோரைடு 500mg) மதுரையில் மலிவாக ஜன அவுஷதி மையத்தில் கிடைக்கிறது. அங்கே விலை மாதத்திற்கு சுமார் ₹9.5 ",
+        "",
+        "--- PRESCRIPTION PLAN ---",
+        "{",
+        "  \"plan\": {",
+        "    \"language\": \"ta\",",
+        "    \"answer\": \"உங்கள் மெட்பார்மின் மாத்திரை (மெட்பார்மின் ஹைட்ரோக்லோரைடு 500mg) மதுரையில் மலிவாக ஜன அவுஷதி மையத்தில் கிடைக்கிறது. அங்கே விலை மாதத்திற்கு சுமார் ₹9.5 மட்டுமே. இது வழக்கு விலையை விட ₹38.5 ரூபாய் குறைவாகும்.\\n\\n**நேரம் வழிமுறைகள்:**\\n- காலை 1 மாத்திரை + இரவு 1 மாத்திரை (சாப்பாட்டுக்கு அப்புறம்)\\n- **சாப்பாட்டுடன் அல்லது சாப்பாட்டுக்கு உடனடியாக** எடுத்துக் கொள்ளுங்கள். இது வயிற்று வலி வராமல் இருக்க உதவும்.\\n\\n**மலிவான ஜன அவுஷதி மையம்:**\\nPMBJP Kendra - கோரிபாலையம், கோவெர்ண்மென்ட் ராஜாஜி மருத்துவமனை (GRH) எதிர், பனகல் சாலை, மதுரை 625020\\nதொலைபேசி: +91-452-2532101\\nதிறந்த நேரம்: தினமும் காலை 8:00 - இரவு 9:00\",",
+        "    \"steps\": [",
+        "      \"காலை உணவுக்குப் பிறகு 1 மாத்திரை, இரவு உணவுக்குப் பிறகு 1 மாத்திரை எடுத்துக் கொள்ளுங்கள்\",",
+        "      \"மதுரையில் PMBJP ஜன அவுஷதி மையத்தை அணுகவும்\",",
+        "      \"வழக்கு விலையை விட குறைந்த விலையில் மாத்திரைகளை வாங்கவும்\"",
+        "    ],",
+        "    \"nearest_kendra\": \"PMBJP Kendra - Goripalayam (Near GRH), Opposite Government Rajaji Hospital (GRH) Gate 2, Panagal Road, 12/4 Panagal Road, Goripalayam, Madurai 625020 (Ph: +91-452-2532101, Open: 8:00 AM - 9:00 PM (All days))\",",
+        "    \"savings\": \"மாதாந்திர சேமிப்பு: சுமார் ₹38.5 ரூபாய் (ஜன அவுஷதி மலிவு விலை)\",",
+        "    \"escalation\": \"எந்தவொரு பக்கவாத்தியையும் அல்லது தலைவலி, வயிற்று புண் போன்ற பக்க விளைவுகளை உணர்ந்தால் உங்கள் மருத்துவரை அல்லது மருந்து விற்பனையாளரை உடனடியாக தொடர்பு கொள்ளவும். தொடர்பு எண்: தமிழ்நாடு சுகாதார ஹெல்ப்லைன் 104 (24x7)\",",
+        "    \"citations\": [",
+        "      \"G-METFORMIN\",",
+        "      \"G-JAN-AUSHADHI\"",
+        "    ]",
+        "  },",
+        "  \"meta\": {",
+        "    \"path\": \"agent\",",
+        "    \"passes\": 2,",
+        "    \"lang\": \"ta\",",
+        "    \"latency_ms\": 15129",
+        "  }",
+        "}"
+      ]
+    }
+  ],
+  "started": "2026-10-29 09:30:04",
+  "seconds": 57.6,
+  "file": "results/demo.webm",
+  "under_3_min": true
+}
